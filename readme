@@ -1,10 +1,25 @@
-1. get into mysql
-2. run sql scripts from resources/test.sql
-3. Open postman and import resources/ThinkHR.postman_collection
-4. run the server as java -jar api-0.0.1-SNAPSHOT.jar
-5. run the first curl command from resources/curls ( this is for the standard user role )
-    5a. copy access_token, replace the bearer token in postman collection for document/1
-6. run the second curl command from resources/curls ( this is for the admin user role )
-    6a. copy access_token, replace the bearer token in postman collection for documents and document
-7. Hit send on the postman urls.
+
+Prerequisites:
+- mysql, maven, jdk 8, postman
+- good understanding of springboot, jwt, oauth, springdata, springrest
+
+
+Build
+- tweek any properties in the resources/application.properties files. Really don't need to if everything is on the localhost.
+- mvn clean compile install -DskipTests
+
+Data setup
+- get into mysql
+- run sql scripts from resources/test.sql
+
+Run the server ( this will be in the target directory
+- run the server as java -jar api-0.0.1-SNAPSHOT.jar
+
+Test
+- Open postman and import resources/ThinkHR.postman_collection
+- run the first curl command from resources/curls ( this is for the standard user role )
+-- copy access_token, replace the bearer token in postman collection for document/1
+- run the second curl command from resources/curls ( this is for the admin user role )
+-- copy access_token, replace the bearer token in postman collection for documents and document
+- Hit send on the postman urls.
 
