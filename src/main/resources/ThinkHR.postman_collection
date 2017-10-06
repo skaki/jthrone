@@ -1,0 +1,86 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ThinkHR",
+		"_postman_id": "7e47cdf6-5566-5e14-2ebf-5406c9f9c42e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List",
+			"request": {
+				"url": "http://localhost:8080/v1/documents",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsidGVzdGp3dHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4uYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTA3MjI5OTAzLCJhdXRob3JpdGllcyI6WyJTVEFOREFSRF9VU0VSIiwiQURNSU5fVVNFUiJdLCJqdGkiOiJkNDAyNmU3YS0yNTkwLTRjMWYtOTZkMC0zNjliMTNjOTFiZDkiLCJjbGllbnRfaWQiOiJ0ZXN0and0Y2xpZW50aWQifQ.hoPBfZgyoDm0LjSzOXfx94VAWJMsukFAAxPdFaivmw0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"fractile_id\" : 8, \"fractile\" : 0.5679 } "
+				},
+				"description": "List All Document"
+			},
+			"response": []
+		},
+		{
+			"name": "GetOne",
+			"request": {
+				"url": "http://localhost:8080/v1/document/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsidGVzdGp3dHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiam9obi5kb2UiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTA3MjI5MTYyLCJhdXRob3JpdGllcyI6WyJTVEFOREFSRF9VU0VSIl0sImp0aSI6IjRiZmE3ZjAzLTkzOTctNGQyYS1hOGM1LTVkMzZkYjQyZWYyYiIsImNsaWVudF9pZCI6InRlc3Rqd3RjbGllbnRpZCJ9.th1GTA9Otj36tRsx7Z1ag3rMClFbNbz7sllDj7tUVNI",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"fractile_id\" : 8, \"fractile\" : 0.5679 } "
+				},
+				"description": "Get One Document"
+			},
+			"response": []
+		},
+		{
+			"name": "Create New",
+			"request": {
+				"url": "http://localhost:8080/v1/document",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsidGVzdGp3dHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4uYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTA3MjI5OTAzLCJhdXRob3JpdGllcyI6WyJTVEFOREFSRF9VU0VSIiwiQURNSU5fVVNFUiJdLCJqdGkiOiJkNDAyNmU3YS0yNTkwLTRjMWYtOTZkMC0zNjliMTNjOTFiZDkiLCJjbGllbnRfaWQiOiJ0ZXN0and0Y2xpZW50aWQifQ.hoPBfZgyoDm0LjSzOXfx94VAWJMsukFAAxPdFaivmw0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"header\" : \"The One\", \"footer\" : \"And only one\", \"body\" : \"ThinkHR\" } "
+				},
+				"description": "Create a new Document"
+			},
+			"response": []
+		}
+	]
+}
